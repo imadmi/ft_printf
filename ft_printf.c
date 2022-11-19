@@ -3,15 +3,15 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-int	add( int nHowMany, ... )
+int	add( int n, ... )
 {
   int	j = 0 , i = -1;
   
-  va_list       intArgumentPointer;
-  va_start( intArgumentPointer, nHowMany );
-  while(++i < nHowMany)
-    j += va_arg( intArgumentPointer, int );
-  va_end( intArgumentPointer );
+  va_list       P_int;
+  va_start( P_int, n );
+  while(++i < n)
+    j += va_arg( P_int, int );
+  va_end( P_int );
   
   return j;
 } 

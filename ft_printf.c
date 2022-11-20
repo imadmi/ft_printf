@@ -6,7 +6,7 @@
 /*   By: imimouni <imimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 18:00:08 by imimouni          #+#    #+#             */
-/*   Updated: 2022/11/20 21:10:32 by imimouni         ###   ########.fr       */
+/*   Updated: 2022/11/20 21:40:02 by imimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ void	ft_converter(char CHAR, va_list ap, int *count)
 	else if (CHAR == 'u')
 		ft_putnbr((unsigned int)va_arg(ap, int), count);
 	else if (CHAR == 'p')
-		ft_putaddress((unsigned long)va_arg(ap, void *), count);
+		ft_putaddress((unsigned long)va_arg(ap, long), count);
 	else if (CHAR == 'x')
-		ft_putbase(va_arg(ap, unsigned int), "0123456789abcdef", count);
+		ft_putbase((unsigned int)va_arg(ap, int), "0123456789abcdef", count);
 	else if (CHAR == 'X')
-		ft_putbase(va_arg(ap, unsigned int), "0123456789ABCDEF", count);
+		ft_putbase((unsigned int)va_arg(ap, int), "0123456789ABCDEF", count);
 	else if (CHAR == 's')
 		ft_putstr(va_arg(ap, char *), count);
 	else
@@ -79,11 +79,11 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
-#include <stdio.h>
-#include <unistd.h>
+// #include <stdio.h>
+// #include <unistd.h>
 
-int main ()
-{
-	ft_printf("imad%c\n",' ');
-	printf("imad%c\n",' ');
-}
+// int main ()
+// {
+// 	ft_printf("imad%c\n",' ');
+// 	printf("imad%c\n",' ');
+// }

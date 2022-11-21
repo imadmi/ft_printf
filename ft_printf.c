@@ -6,11 +6,12 @@
 /*   By: imimouni <imimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 18:00:08 by imimouni          #+#    #+#             */
-/*   Updated: 2022/11/20 21:40:02 by imimouni         ###   ########.fr       */
+/*   Updated: 2022/11/21 13:25:25 by imimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 void	ft_putnbr(long nbr, int *count)
 {
@@ -46,13 +47,13 @@ void	ft_converter(char CHAR, va_list ap, int *count)
 	else if (CHAR == 'u')
 		ft_putnbr((unsigned int)va_arg(ap, int), count);
 	else if (CHAR == 'p')
-		ft_putaddress((unsigned long)va_arg(ap, long), count);
+		ft_putaddress(va_arg(ap, long), count);
 	else if (CHAR == 'x')
 		ft_putbase((unsigned int)va_arg(ap, int), "0123456789abcdef", count);
 	else if (CHAR == 'X')
 		ft_putbase((unsigned int)va_arg(ap, int), "0123456789ABCDEF", count);
 	else if (CHAR == 's')
-		ft_putstr(va_arg(ap, char *), count);
+		ft_putstr((char *)va_arg(ap, long), count);
 	else
 		ft_putchar(CHAR, count);
 }
@@ -79,11 +80,9 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
-// #include <stdio.h>
-// #include <unistd.h>
-
 // int main ()
 // {
-// 	ft_printf("imad%c\n",' ');
-// 	printf("imad%c\n",' ');
+// 	system("clear");
+// 	printf("%d\n",ft_printf("imad %s.\n","NULL"));
+// 	printf("%d\n",printf("imad %s.\n","NULL"));
 // }

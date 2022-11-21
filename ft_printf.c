@@ -6,12 +6,12 @@
 /*   By: imimouni <imimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 18:00:08 by imimouni          #+#    #+#             */
-/*   Updated: 2022/11/21 13:25:25 by imimouni         ###   ########.fr       */
+/*   Updated: 2022/11/21 13:26:49 by imimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
+//#include <stdio.h>
 
 void	ft_putnbr(long nbr, int *count)
 {

@@ -6,12 +6,11 @@
 /*   By: imimouni <imimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 18:00:08 by imimouni          #+#    #+#             */
-/*   Updated: 2022/11/22 10:48:20 by imimouni         ###   ########.fr       */
+/*   Updated: 2022/11/22 15:36:28 by imimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-//#include <stdio.h>
 
 void	ft_putnbr(long nbr, int *count)
 {
@@ -83,3 +82,13 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (count);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char s[]=" Mimouni";
+// 	void *ss = &s;
+// 	int d = ft_printf("Imad%s\n%d\n%p\n%x\n",s,123,ss,0x123a);
+// 	printf("Somme des characters est : %d\n",d);
+// 	ft_printf("%%%");
+// }

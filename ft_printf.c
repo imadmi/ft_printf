@@ -6,7 +6,7 @@
 /*   By: imimouni <imimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 18:00:08 by imimouni          #+#    #+#             */
-/*   Updated: 2022/11/21 13:26:49 by imimouni         ###   ########.fr       */
+/*   Updated: 2022/11/22 10:48:20 by imimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_putaddress(unsigned long address, int *count)
 	ft_putbase(address, "0123456789abcdef", count);
 }
 
-void	ft_converter(char CHAR, va_list ap, int *count)
+static void	ft_converter(char CHAR, va_list ap, int *count)
 {
 	if (CHAR == 'c')
 		ft_putchar((char)va_arg(ap, int), count);
@@ -73,16 +73,13 @@ int	ft_printf(const char *format, ...)
 			count++;
 		}
 		else
-			ft_converter(*++format, ap, &count);
+		{
+			if (*++format == '\0')
+				break ;
+			ft_converter(*format, ap, &count);
+		}
 		format++;
 	}
 	va_end(ap);
 	return (count);
 }
-
-// int main ()
-// {
-// 	system("clear");
-// 	printf("%d\n",ft_printf("imad %s.\n","NULL"));
-// 	printf("%d\n",printf("imad %s.\n","NULL"));
-// }

@@ -7,7 +7,7 @@
 </p>
 
 
-- [About the project](#About)
+- [About the project](#about-the-project)
 - [Usage](#Usage)
 
 ---

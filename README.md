@@ -14,7 +14,7 @@
 
 ## About the project
 
-> _In this project is pretty straight forward. I recoded printf function. I learned how to use variadic functions._
+> _I recoded printf function. I learned how to use variadic functions._
 
 	This project consists of coding a library that contains a simplified version of the printf function.
 

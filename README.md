@@ -12,7 +12,7 @@
 
 ---
 
-##  About the project
+## About the project
 
 > _In this project is pretty straight forward. I recoded printf function. I learned how to use variadic functions._
 
